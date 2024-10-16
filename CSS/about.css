@@ -1,0 +1,274 @@
+@font-face {
+    font-family: Box3;
+    src: url(Box3.ttf);
+}
+
+@font-face {
+    font-family: WordleFont;
+    src: url(WordleFont.ttf);
+}
+
+@font-face {
+    font-family: Bahnschrift;
+    src: url(Bahnschrift.ttf);
+}
+
+/* Style the Header */
+.header{
+  padding:  80px;
+  text-align: center;
+  background-color: #FFFFFF;
+  color: black; 
+
+}
+
+.footer{
+  font-family: 'Bahnschrift';
+  font-size: 16.5px;
+  padding:  20px;
+  text-align: center;
+  background-color: #FFFFFF;
+  color: white;
+  box-shadow: 0px -4px 8px 0 rgba(0, 0, 0, 0.1), 0px -6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.footerC{
+  padding:  0px;
+  text-align: center;
+  background-color: #FFFFFF;
+  color: lightgrey;
+}
+
+
+
+/* Style the H1 element in my header */
+.header h1{
+  font-size: 150px;
+  font-weight: 100;
+  font-family: 'Box3';
+}
+
+.header p{
+  font-family: 'Bahnschrift';
+  font-size: 16.5px;
+}
+
+/*Style the navigation bar*/
+.navbar{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #C4D8F3;
+  overflow: hidden;
+  padding: 5px;
+}
+
+
+
+p {
+  font-family: 'Bahnschrift';
+  font-weight: 1;
+}
+
+.navbar a{
+  font-family: 'Bahnschrift';
+  float: left;
+  display: block;
+  border-radius: 25px;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 15px;
+  text-align: center;
+  background-color: #CBC3E3;
+  margin:  0px 5px;
+}
+
+
+
+/*styles the hover on navbar*/
+.navbar a:hover{
+background-color: #abcfe6;
+
+}
+
+
+h2 {
+  font-family: 'Bahnschrift';
+}
+
+div.gallery {
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 5px solid #3C6539;
+  background-color: #72AD6E;
+}
+
+div.gallery:hover {
+  border: 5px solid #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+div.gallery img {
+  width: 100%;
+  height: fit-content;
+  border-radius: 15px;
+}
+
+div.desc {
+  padding: 10px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 10px;
+  float: left;
+  width: 48%;
+}
+
+.responsive3 {
+  padding: 0 10px;
+  float: left;
+  width: 32%;
+}
+
+.flowchart {
+  padding: 0 10px;
+  float: left;
+
+  justify-content: center;
+  margin: auto;
+}
+
+.flowchart img{
+  border-image: img(flowchart.png) 54 142 144 114 / 20px / 0px stretch;
+  width: 90%;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid #000000;
+  background-color: #C4D8F3;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.flowchart img:hover {
+  border: 2px solid #000000;
+  background-color: #7F00FF;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* removes border around webpage */
+body{
+  padding: 0;
+  margin: 0;
+  background-color:#ADD8E6;
+  font-family: 'Bahnschrift';
+  color:  #000000;
+}
+
+
+/* targets table rows when hovered */
+.table td:hover{
+  background-color: #7F00FF;
+}
+
+/* targets table headers */
+.table th{
+  border-radius: 3px;
+  background-color: #CBC3E3;
+  color: black;
+  padding: 5px;
+  border: 1px solid #000000;
+}
+
+/* targets table data */
+.table td{
+  border-radius: 3px;
+  background-color: #CBC3E3;
+  color:black;
+  border: 2px solid #000000;
+  padding: 8px;
+}
+
+/* targets the table class with any elements with the ID "numbers" */
+.table #numbers{
+  text-align: center;
+  background-color: #000000;
+
+}
+
+
+.table {
+  border-radius: 5px;
+  padding: 10px 10px 70px 10px;
+
+}
+
+
+/*adds padding to divs except exluded ones */
+div:not([class="header"]):not([class="footer"]):not([class="navbar"]):not([class="login"]):not([class="modal"]){
+  margin: 8px;
+}
+
+
+.chartphoto img{
+  display: block;
+  border-radius: 25px;
+  border: 10px solid #AFE9D5;
+  width: 400px;
+  margin-left: auto;
+}
+
+.designphoto img{
+  display: block;
+  width: 700  px;
+  margin-left: auto;
+}
+
+.studentdiagram img{
+  display: block;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 25px;
+  border: 10px solid #AFE9D5;
+  width: 500px;
+  margin-left: auto;
+
+}
+
+.Video video{
+  display: block;
+  border-radius: 25px;
+  border: 10px solid #AFE9D5;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.video {
+  text-align: justify-all;
+}
