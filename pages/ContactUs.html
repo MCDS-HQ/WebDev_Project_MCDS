@@ -35,12 +35,14 @@
     <form>
 <center>
 	<h2>Please fill in your info and we will get back to you!</h2>
-  <label for="first_name">First name:</label><br>
-  <input type="text" id="first_name" name="first_name"><br>
-  <label for="last_name" text-align: center;>Last name:</label><br>
-  <input type="text" id="last_name" name="last_name"><br>
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"required aria-required="true"><br>
+  <label for="Phone_number" text-align: center;>Phone_number:</label><br>
+  <input type="text" id="Phone_number" name="Phone_number"required aria-required="true"><br>
   <label for="Email" text-align: center;>Email:</label><br>
-  <input type="text" id="Email" name="Email"><br>
+  <input type="text" id="Email" name="Email"required aria-required="true"><br>
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" aria-label="Your message"></textarea>
   
   
   <input type="submit" value="Submit">
@@ -60,6 +62,36 @@
                <p>Copyright &copy; Snow Trails / MCDS 2024/2025| <!--copyright with signature-->
 			   </p>
         </footer>
+	<script>
+        function validateForm() {
+            // Clear previous error messages
+            let errorMessage = document.getElementById('error-message');
+            errorMessage.innerText = '';
+
+            let name = document.getElementById('name').value.trim();
+            let phoneNumber = document.getElementById('phone_number').value.trim();
+            let email = document.getElementById('email').value.trim();
+            let message = document.getElementById('message').value.trim();
+
+            // Simple validation
+            if (!name) {
+                errorMessage.innerText += 'Please enter your name. ';
+            }
+            if (!phoneNumber) {
+                errorMessage.innerText += 'Please enter your phone number. ';
+            }
+            if (!email) {
+                errorMessage.innerText += 'Please enter your email. ';
+            }
+            if (errorMessage.innerText) {
+                // Prevent form submission if there are errors
+                return false;
+            }
+
+            // Successfully validated
+            return true;
+        }
+    </script>
 	</div>	
 	</body>
 </html><!-- end of html doc-->
